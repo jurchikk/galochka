@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Список задач онлайн — бесплатно, без регистрации | Галочка</title>
+  <meta name="description" content="Галочка — бесплатный список задач онлайн (to-do list) без регистрации. Добавляйте дела, отмечайте выполненные, удаляйте лишнее. Список хранится в браузере.">
+  <link rel="canonical" href="https://jurchikk.github.io/galochka/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#f3f4f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1013" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Галочка">
+  <meta property="og:title" content="Список задач онлайн — бесплатно и без регистрации">
+  <meta property="og:description" content="Добавляйте дела, отмечайте выполненные, удаляйте лишнее. Список хранится в вашем браузере, регистрация не нужна.">
+  <meta property="og:url" content="https://jurchikk.github.io/galochka/">
+  <meta property="og:image" content="https://jurchikk.github.io/galochka/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Галочка — список задач онлайн">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="modulepreload" href="assets/js/todo-ui.js">
+  <link rel="modulepreload" href="assets/js/store.js">
+  <link rel="modulepreload" href="assets/js/theme.js">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('galochka.theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://jurchikk.github.io/galochka/#website",
+        "url": "https://jurchikk.github.io/galochka/",
+        "name": "Галочка",
+        "description": "Список задач онлайн без регистрации",
+        "inLanguage": "ru"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://jurchikk.github.io/galochka/#webpage",
+        "url": "https://jurchikk.github.io/galochka/",
+        "name": "Список задач онлайн — бесплатно, без регистрации | Галочка",
+        "description": "Галочка — бесплатный список задач онлайн (to-do list) без регистрации. Добавляйте дела, отмечайте выполненные, удаляйте лишнее. Список хранится в браузере.",
+        "inLanguage": "ru",
+        "dateModified": "2026-11-16",
+        "isPartOf": { "@id": "https://jurchikk.github.io/galochka/#website" },
+        "about": { "@id": "https://jurchikk.github.io/galochka/#app" },
+        "mainEntity": { "@id": "https://jurchikk.github.io/galochka/#app" }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://jurchikk.github.io/galochka/#app",
+        "name": "Галочка",
+        "alternateName": "Список задач онлайн",
+        "url": "https://jurchikk.github.io/galochka/",
+        "description": "Список дел в браузере: добавление задач, отметка выполненных, удаление и сохранение после обновления страницы.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Нужен браузер с включённым JavaScript",
+        "inLanguage": "ru",
+        "isAccessibleForFree": true,
+        "image": "https://jurchikk.github.io/galochka/assets/img/og.png",
+        "featureList": [
+          "Добавление задач",
+          "Отметка выполненных задач",
+          "Удаление задач с возможностью вернуть",
+          "Сохранение списка в браузере",
+          "Правка текста задачи",
+          "Фильтр: все, активные, выполненные",
+          "Светлая и тёмная тема"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "RUB"
+        },
+        "isPartOf": { "@id": "https://jurchikk.github.io/galochka/#website" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://jurchikk.github.io/galochka/#faq",
+        "inLanguage": "ru",
+        "isPartOf": { "@id": "https://jurchikk.github.io/galochka/#webpage" },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Нужно ли регистрироваться?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Нет, в Галочке регистрация не нужна. Список задач открывается сразу, без почты, пароля и аккаунта." }
+          },
+          {
+            "@type": "Question",
+            "name": "Это бесплатно?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Да, Галочка бесплатная. В ней нет платных функций, подписки и рекламы." }
+          },
+          {
+            "@type": "Question",
+            "name": "Пропадут ли задачи, если обновить страницу или закрыть браузер?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Нет, при обычном использовании задачи в Галочке не пропадут. Список хранится в браузере и остаётся на месте после обновления страницы, закрытия вкладки и перезагрузки компьютера. Исключения — режим инкогнито, очистка данных сайта и настройки браузера, которые стирают данные при закрытии." }
+          },
+          {
+            "@type": "Question",
+            "name": "Увижу ли я свой список на другом устройстве?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Нет. Галочка хранит список только в том браузере, где вы его составили: синхронизации между устройствами нет." }
+          },
+          {
+            "@type": "Question",
+            "name": "Кто видит мои задачи?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Только вы и те, у кого есть доступ к вашему браузеру на этом устройстве. Галочка не отправляет задачи на сервер: они лежат только в вашем браузере." }
+          },
+          {
+            "@type": "Question",
+            "name": "Работает ли список задач на телефоне?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Да, Галочка работает в браузере телефона. Страница подстраивается под экран, устанавливать приложение не нужно." }
+          },
+          {
+            "@type": "Question",
+            "name": "Сколько задач можно добавить?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Число задач Галочка не ограничивает. Место под список выделяет браузер: оно конечно, но для обычного списка дел его хватает с большим запасом. Одна задача вмещает до 200 символов." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="container topbar">
+    <a class="logo" href="./" aria-label="Галочка — на главную">
+      <span class="logo__mark" aria-hidden="true"></span>
+      Галочка
+    </a>
+    <nav class="nav" aria-label="Разделы страницы">
+      <a href="#vozmozhnosti">Возможности</a>
+      <a href="#kak-polzovatsya">Как пользоваться</a>
+      <a href="#voprosy">Вопросы</a>
+    </nav>
+    <button class="icon-btn" type="button" data-theme-toggle aria-label="Тёмная тема" aria-pressed="false">
+      <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="7.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="currentColor" d="M10 2.8a7.2 7.2 0 0 1 0 14.4z"/></svg>
+    </button>
+    <a class="btn btn--primary btn--small" href="doska/">Открыть список</a>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <div>
+        <p class="eyebrow">Бесплатно · Без установки</p>
+        <h1>Список задач онлайн без регистрации</h1>
+        <p class="lead">Галочка — бесплатный список задач в браузере без регистрации. Записывайте дела, отмечайте готовые и удаляйте лишнее: задачи хранятся в вашем браузере и остаются на месте после обновления страницы.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--large" href="doska/">Открыть список задач</a>
+          <a class="btn btn--ghost btn--large" href="#kak-polzovatsya">Как это работает</a>
+        </div>
+        <ul class="ticks">
+          <li>Подстраивается под экран телефона и компьютера</li>
+          <li>Задачи не отправляются на сервер</li>
+          <li>Удалённую задачу можно вернуть</li>
+        </ul>
+      </div>
+
+      <div class="hero__demo">
+        <section class="todo" data-todo-root aria-label="Попробуйте список задач">
+          <div class="todo__head">
+            <p class="todo__title">Попробуйте прямо здесь</p>
+            <p class="todo__counter" data-todo="counter" aria-live="polite">Осталось 3 задачи</p>
+          </div>
+
+          <form class="todo__form" data-todo="form" autocomplete="off">
+            <label class="visually-hidden" for="demo-task">Новая задача</label>
+            <input class="todo__input" id="demo-task" data-todo="input" type="text" maxlength="200" placeholder="Что нужно сделать?" enterkeyhint="done">
+            <button class="btn btn--primary" type="submit">Добавить</button>
+          </form>
+
+          <!-- Три задачи-подсказки стоят в разметке заранее, чтобы страница не прыгала, пока загружается скрипт. -->
+          <ul class="todo__list" data-todo="list">
+            <li class="task">
+              <input class="task__check" type="checkbox" aria-label="Отметить выполненной: Запишите свою первую задачу в поле выше">
+              <span class="task__text">Запишите свою первую задачу в поле выше</span>
+              <div class="task__actions"><button class="task__btn task__btn--delete" type="button" aria-label="Удалить: Запишите свою первую задачу в поле выше"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5.5 5.5l9 9M14.5 5.5l-9 9"/></svg></button></div>
+            </li>
+            <li class="task">
+              <input class="task__check" type="checkbox" aria-label="Отметить выполненной: Отметьте эту задачу — нажмите на кружок слева">
+              <span class="task__text">Отметьте эту задачу — нажмите на кружок слева</span>
+              <div class="task__actions"><button class="task__btn task__btn--delete" type="button" aria-label="Удалить: Отметьте эту задачу — нажмите на кружок слева"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5.5 5.5l9 9M14.5 5.5l-9 9"/></svg></button></div>
+            </li>
+            <li class="task">
+              <input class="task__check" type="checkbox" aria-label="Отметить выполненной: Удалите лишнее — крестик справа">
+              <span class="task__text">Удалите лишнее — крестик справа</span>
+              <div class="task__actions"><button class="task__btn task__btn--delete" type="button" aria-label="Удалить: Удалите лишнее — крестик справа"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5.5 5.5l9 9M14.5 5.5l-9 9"/></svg></button></div>
+            </li>
+          </ul>
+          <p class="todo__empty" data-todo="empty" hidden></p>
+
+          <div class="todo__foot">
+            <span class="todo__note">Список настоящий: он сохраняется в браузере</span>
+            <a class="todo__more" data-todo="more" href="doska/" hidden></a>
+          </div>
+
+          <noscript><p class="todo__empty">Чтобы список заработал, включите JavaScript в настройках браузера.</p></noscript>
+        </section>
+      </div>
+    </div>
+
+    <section class="section section--soft" id="vozmozhnosti">
+      <div class="container">
+        <h2>Что умеет список дел онлайн</h2>
+        <p class="section__lead">Галочка — это список дел, который открывается в браузере. В нём можно добавлять задачи, отмечать выполненные, править и удалять их.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Добавление задач</h3>
+            <p>Напишите задачу и нажмите Enter или кнопку «Добавить». Новая задача встаёт первой в списке.</p>
+          </article>
+          <article class="card">
+            <h3>Отметка выполненных</h3>
+            <p>Нажмите на кружок — задача зачеркнётся. Нажмите ещё раз, чтобы вернуть её в работу.</p>
+          </article>
+          <article class="card">
+            <h3>Удаление</h3>
+            <p>Крестик убирает задачу. Если удалили случайно, в течение шести секунд её можно вернуть кнопкой «Вернуть».</p>
+          </article>
+          <article class="card">
+            <h3>Сохранение</h3>
+            <p>Галочка сохраняет список в браузере: он остаётся на месте после обновления страницы и перезапуска браузера, пока вы не очистите данные сайта.</p>
+          </article>
+          <article class="card">
+            <h3>Правка и фильтр</h3>
+            <p>Кнопка с карандашом или двойной щелчок по тексту открывает правку. Фильтр показывает все, активные или выполненные задачи.</p>
+          </article>
+          <article class="card">
+            <h3>Тёмная тема</h3>
+            <p>Сайт подстраивается под тему устройства. Переключить её вручную можно кнопкой в шапке.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kak-polzovatsya">
+      <div class="container">
+        <h2>Как пользоваться списком задач</h2>
+        <p class="section__lead">Устанавливать приложение и заводить аккаунт не нужно: список готов к работе сразу после открытия.</p>
+        <ol class="steps">
+          <li>
+            <h3>Запишите задачу</h3>
+            <p>Напишите дело в поле ввода и нажмите Enter или кнопку «Добавить». Одна строка — одно дело.</p>
+          </li>
+          <li>
+            <h3>Отметьте выполненное</h3>
+            <p>Сделали — нажмите на кружок слева от задачи. Она зачеркнётся и перестанет считаться в счётчике.</p>
+          </li>
+          <li>
+            <h3>Уберите лишнее</h3>
+            <p>Крестик удаляет одну задачу, кнопка «Удалить выполненные» — все сделанные сразу.</p>
+          </li>
+        </ol>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="doska/">Перейти к списку задач</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="hranenie">
+      <div class="container split">
+        <div>
+          <h2>Где хранятся задачи</h2>
+          <p class="section__lead">В Галочке задачи хранятся в вашем браузере — в локальном хранилище (localStorage) на вашем устройстве. На сервер они не отправляются: у сайта нет базы данных и личных кабинетов.</p>
+        </div>
+        <div class="panel">
+          <h3>Что это значит на практике</h3>
+          <ul class="bullets">
+            <li>Список виден только в этом браузере на этом устройстве.</li>
+            <li>На другом телефоне или компьютере список будет свой.</li>
+            <li>В режиме инкогнито задачи исчезнут, когда вы закроете окно.</li>
+            <li>Если очистить данные сайта в настройках браузера, список удалится.</li>
+            <li>Safari может удалить данные сайта, если вы долго его не открывали.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="komu-podoydet">
+      <div class="container">
+        <h2>Кому подойдёт такой to-do list, а кому нет</h2>
+        <p class="section__lead">Галочка — простой to-do list, или, как его ещё называют, туду-лист: список дел для одного человека и одного устройства. Вот как понять, хватит ли вам его.</p>
+        <div class="fit">
+          <div class="panel">
+            <h3>Подойдёт, если</h3>
+            <ul class="bullets">
+              <li>нужно быстро набросать дела на день, ничего не устанавливая;</li>
+              <li>вы работаете за одним устройством и не хотите заводить ещё один аккаунт;</li>
+              <li>нужен простой чек-лист: покупки, сборы в поездку, шаги одной задачи.</li>
+            </ul>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="doska/">Составить список</a>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Не подойдёт, если</h3>
+            <ul class="bullets bullets--no">
+              <li>нужен один список на телефоне и на компьютере: синхронизации здесь нет;</li>
+              <li>нужны сроки, напоминания и повторяющиеся задачи;</li>
+              <li>над списком работает команда: общего доступа здесь нет.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="kak-sostavit">
+      <div class="container">
+        <h2>Как составить список дел на день</h2>
+        <p class="section__lead">Чтобы составить список дел на день, записывайте конкретные действия, начинайте каждое с глагола и не берите больше, чем успеете сделать. Ниже пять правил, которые делают список рабочим.</p>
+        <ol class="rules">
+          <li>
+            <strong>Начинайте с глагола.</strong>
+            <span>«Позвонить в банк» понятнее, чем просто «Банк»: сразу видно, что делать.</span>
+          </li>
+          <li>
+            <strong>Одна строка — одно действие.</strong>
+            <span>Большое дело разбейте на шаги, каждый из которых можно закончить за один подход.</span>
+          </li>
+          <li>
+            <strong>Не записывайте больше, чем успеете.</strong>
+            <span>Короткий список, который закрыт к вечеру, полезнее длинного, который переезжает на завтра.</span>
+          </li>
+          <li>
+            <strong>Важное — наверх.</strong>
+            <span>В Галочке новая задача встаёт в начало списка, поэтому самое важное запишите последним.</span>
+          </li>
+          <li>
+            <strong>Вечером очистите выполненное.</strong>
+            <span>Кнопка «Удалить выполненные» оставит в списке только то, что переходит на завтра.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="voprosy">
+      <div class="container">
+        <h2>Частые вопросы о Галочке</h2>
+        <div class="faq">
+          <details open>
+            <summary>Нужно ли регистрироваться?</summary>
+            <p>Нет, в Галочке регистрация не нужна. Список задач открывается сразу, без почты, пароля и аккаунта.</p>
+          </details>
+          <details>
+            <summary>Это бесплатно?</summary>
+            <p>Да, Галочка бесплатная. В ней нет платных функций, подписки и рекламы.</p>
+          </details>
+          <details>
+            <summary>Пропадут ли задачи, если обновить страницу или закрыть браузер?</summary>
+            <p>Нет, при обычном использовании задачи в Галочке не пропадут. Список хранится в браузере и остаётся на месте после обновления страницы, закрытия вкладки и перезагрузки компьютера. Исключения — режим инкогнито, очистка данных сайта и настройки браузера, которые стирают данные при закрытии.</p>
+          </details>
+          <details>
+            <summary>Увижу ли я свой список на другом устройстве?</summary>
+            <p>Нет. Галочка хранит список только в том браузере, где вы его составили: синхронизации между устройствами нет.</p>
+          </details>
+          <details>
+            <summary>Кто видит мои задачи?</summary>
+            <p>Только вы и те, у кого есть доступ к вашему браузеру на этом устройстве. Галочка не отправляет задачи на сервер: они лежат только в вашем браузере.</p>
+          </details>
+          <details>
+            <summary>Работает ли список задач на телефоне?</summary>
+            <p>Да, Галочка работает в браузере телефона. Страница подстраивается под экран, устанавливать приложение не нужно.</p>
+          </details>
+          <details>
+            <summary>Сколько задач можно добавить?</summary>
+            <p>Число задач Галочка не ограничивает. Место под список выделяет браузер: оно конечно, но для обычного списка дел его хватает с большим запасом. Одна задача вмещает до 200 символов.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <h2>Запишите первую задачу</h2>
+          <p>Список откроется сразу. Всё, что вы добавили наверху этой страницы, уже там.</p>
+          <a class="btn btn--primary btn--large" href="doska/">Открыть список задач</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div class="footer__row">
+      <p>© 2026 Галочка — список задач в браузере</p>
+      <nav class="footer__links" aria-label="Ссылки в подвале">
+        <a href="doska/">Список задач</a>
+        <a href="#vozmozhnosti">Возможности</a>
+        <a href="#hranenie">Где хранятся задачи</a>
+        <a href="#voprosy">Вопросы</a>
+      </nav>
+    </div>
+    <p class="footer__about">Галочка не использует cookie и счётчики посещений. В браузере хранятся только ваши задачи и выбранная тема. Страница обновлена в ноябре 2026 года.</p>
+  </footer>
+
+  <div class="toast" data-todo="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="assets/js/landing.js"></script>
+</body>
+</html>
